@@ -1,2 +1,5 @@
-#!/usr/bin/env node.
-console.log("Welcome to the Brain Games!")
+#!/usr/bin/env node
+
+import hello from '/home/alexey/frontend-project-44/src/cli.js';
+
+
