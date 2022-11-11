@@ -1,3 +1,8 @@
-npm install ci 
-node bin/brain-games.js
-npm publish --dry-run
+install-deps:
+	npm install ci 
+
+brain-games:
+	node bin/brain-games.js
+
+publish:
+	npm publish --dry-run
