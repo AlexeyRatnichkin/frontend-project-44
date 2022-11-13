@@ -17,6 +17,7 @@ while (i < 3) {
     } else {
       console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
       console.log("Let's try again, Bill!");
+      break;
   };
+  console.log(`Congratulations, ${name}!`);  
 };
-console.log(`Congratulations, ${name}`);
