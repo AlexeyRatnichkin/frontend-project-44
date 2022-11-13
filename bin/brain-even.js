@@ -19,5 +19,7 @@ while (i < 3) {
       console.log("Let's try again, Bill!");
       break;
   };
-  console.log(`Congratulations, ${name}!`);  
+  if (i === 3) {
+  console.log(`Congratulations, ${name}!`);
+  };  
 };
