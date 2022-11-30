@@ -4,6 +4,7 @@ const calc = () => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}`);
+  console.log('What is the result of the expression?');
   let i = 0;
   let c = 0;  
   while (i < 3) {
