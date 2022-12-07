@@ -1,6 +1,6 @@
+#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-import calc from '../src/games/calc.js'
+import brainCalc from '../src/games/calc.js';
 
-calc();
-
+brainCalc();
