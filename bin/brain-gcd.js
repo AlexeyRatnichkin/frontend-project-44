@@ -1,5 +1,6 @@
+#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-import gcd from '../src/games/gcd.js'
+import brainGcd from '../src/games/gcd.js'
 
-gcd();
+brainGcd();
