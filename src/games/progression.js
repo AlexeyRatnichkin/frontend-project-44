@@ -1,46 +1,36 @@
-import readlineSync from 'readline-sync';
 
-const progression = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}`);
-  console.log('What number is missing in the progression?');
-  let i = 0;  
-  while (i < 3) {
-    let a = Math.abs(Math.floor(Math.random() * 101));
-    let b = Math.abs(Math.floor(Math.random(1) * 9) + 1);
-    let result = [];
-    let result1 = [];
-    let c = 0;
-    let d = 0;
-    let f = a;
-    while (c < 10) {
-      d = f;
-      result.push(d);
-      f = d + b
-      c += 1;
-    }
-    
-    let h = result[b];
-    result1 = result;
-    result1[b] = '..';
-    result1 = result1.join(' ');
-    console.log('Question: ' + result1);
-    const quest2 = readlineSync.question('Your answer: ');
-    
-    if (Number(h) === Number(quest2)) {
-      console.log('Correct!');
-      i += 1;
-    } else {
-      console.log(`'${quest2}', is wrong answer ;(. Correct answer was, '${h}'.`);
-      console.log(`Let's try again, ${name}!`);
-      break;
-    }
-  
-    if (i === 3) {
-      console.log(`Congratulations, ${name}!`);
-    } 
+import getRandomNumber from '../utils.js';
+import gameEngine from '../index.js';
+
+/* Задача игры.*/
+const description = 'What number is missing in the progression?';
+const progressionLength = 10;
+
+/* Создание массива с прогрессией.*/
+function getProgression(firstNumber, step) {
+  const progression = [firstNumber];
+  let nextNumber = firstNumber + step;
+  for (let i = 1; i < progressionLength; i += 1) {
+    progression.push(nextNumber);
+    nextNumber += step;
   }
-}  
+  return progression;
+}
 
-export default progression;
+/* Получаем ответы и вопросы.*/
+function getQuestAndAnswer() {
+  const startNum = getRandomNumber(0, 50);
+  const step = getRandomNumber(2, 9);
+  const progression = getProgression(startNum, step);
+  const randomIndex = getRandomNumber(0, 9);
+
+  const correctAnswer = String(progression[randomIndex]);
+  progression[randomIndex] = '..';
+  const question = progression.join(' ');
+
+  return [question, correctAnswer];
+}
+
+export default () => {
+  gameEngine(description, getQuestAndAnswer);
+};
