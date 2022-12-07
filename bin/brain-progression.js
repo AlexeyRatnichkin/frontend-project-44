@@ -1,5 +1,6 @@
+#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-import progression from '../src/games/progression.js';
+import brainProg from '../src/games/progression.js';
 
-progression();
+brainProg();
