@@ -1,48 +1,36 @@
-import readlineSync from 'readline-sync';
+import getRandomNumber from '../utils.js';
+import gameEngine from '../index.js';
 
-const gcd = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}`);
-  console.log('Find the greatest common divisor of given numbers.');
-  let i = 0;
-  while (i < 3) {
-    let a = Math.abs(Math.floor(Math.random() * 101));
-    let b = Math.abs(Math.floor(Math.random() * 101));
-    console.log('Question: ' + a + ' ' + b);
-    const quest2 = readlineSync.question('Your answer: ');
-    let result = [];
-    let result1 = [];
-    let c = 1;
-    let d = 1;
-    while (c < a + 1) {
-      if (a % c === 0) {
-        result.push(c);
-      }
-      c += 1;
+/* Цель игры*/
+const description = 'Find the greatest common divisor of given numbers.';
+
+/*Получение правильного ответа*/
+function getGcd(firstNumber, secondNumber) {
+  let a = 0;
+  let b = 0;
+  let divisor = firstNumber > secondNumber ? secondNumber : firstNumber;
+
+  while (divisor > 0) {
+    a = firstNumber % divisor;
+    b = secondNumber % divisor;
+    if (a === 0 && b === 0) {
+      return divisor;
     }
-    while (d < b + 1) {
-      if (b % d === 0) {
-        result1.push(d)
-      }
-      d += 1;
-    }
-    const matched = result.filter( el => result1.indexOf( el ) > -1 );
-    let f = (matched[matched.length - 1]);
-    
-    if (Number(f) === Number(quest2)) {
-      console.log('Correct!');
-      i += 1;
-    } else {
-      console.log(`'${quest2}', is wrong answer ;(. Correct answer was, '${f}'.`);
-      console.log(`Let's try again, ${name}!`);
-      break;
-    }
-  
-    if (i === 3) {
-      console.log(`Congratulations, ${name}!`);
-    }     
+    divisor -= 1;
   }
-};
+  return divisor;
+}
 
-export default gcd;
+/*Массив с вопросами и ответами.*/
+function getQuestAndAnswer() {
+  const firstNumber = getRandomNumber(1, 50);
+  const secondNumber = getRandomNumber(1, 50);
+  const question = `${firstNumber} ${secondNumber}`;
+  const correctAnswer = `${getGcd(firstNumber, secondNumber)}`;
+
+  return [question, correctAnswer];
+}
+
+export default () => {
+  gameEngine(description, getQuestAndAnswer);
+};
