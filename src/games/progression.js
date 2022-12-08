@@ -1,12 +1,11 @@
-
 import getRandomNumber from '../utils.js';
 import gameEngine from '../index.js';
 
-/* Задача игры.*/
+/* Задача игры. */
 const description = 'What number is missing in the progression?';
 const progressionLength = 10;
 
-/* Создание массива с прогрессией.*/
+/* Создание массива с прогрессией. */
 function getProgression(firstNumber, step) {
   const progression = [firstNumber];
   let nextNumber = firstNumber + step;
@@ -17,7 +16,7 @@ function getProgression(firstNumber, step) {
   return progression;
 }
 
-/* Получаем ответы и вопросы.*/
+/* Получаем ответы и вопросы. */
 function getQuestAndAnswer() {
   const startNum = getRandomNumber(0, 50);
   const step = getRandomNumber(2, 9);
