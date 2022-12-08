@@ -1,19 +1,19 @@
 import getRandomNumber from '../utils.js';
 import gameEngine from '../index.js';
 
-/* Цель игры.*/
+/* Цель игры. */
 const description = 'What is the result of the expression?';
 
-/* Массив с возможными операциями.*/
+/* Массив с возможными операциями. */
 const operations = ['+', '-', '*'];
 
-/* Получение случайной операции.*/
+/* Получение случайной операции. */
 function getRandomOperation(arrayWithOperations) {
   const rand = Math.floor(Math.random() * arrayWithOperations.length);
   return operations[rand];
 }
 
-/* Получение верного ответа.*/
+/* Получение верного ответа. */
 function calculate(firstNumber, secondNumber, operation) {
   switch (operation) {
     case '+':
@@ -25,7 +25,7 @@ function calculate(firstNumber, secondNumber, operation) {
   }
 }
 
-/* Массив с вопросами и ответами.*/
+/* Массив с вопросами и ответами. */
 function getQuestAndAnswer() {
   let firstNumber = 0;
   let secondNumber = 0;
