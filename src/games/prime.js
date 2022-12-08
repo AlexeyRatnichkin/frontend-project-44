@@ -4,7 +4,7 @@ import gameEngine from '../index.js';
 /* Цель игры */
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".ind the greatest common divisor of given numbers.';
 
-/* Проверка на простое число.*/
+/* Проверка на простое число. */
 function isTheNumberPrime(number) {
   for (let i = 2; i < number; i += 1) {
     if (number % i === 0) {
@@ -14,7 +14,7 @@ function isTheNumberPrime(number) {
   return true;
 }
 
-/* Получаем массив вопросов и ответов.*/
+/* Получаем массив вопросов и ответов. */
 function getQuestAndAnswer() {
   const question = getRandomNumber(1, 100);
   const correctAnswer = isTheNumberPrime(question) ? 'yes' : 'no';
@@ -24,4 +24,4 @@ function getQuestAndAnswer() {
 
 export default () => {
   gameEngine(description, getQuestAndAnswer);
-}; 
+};
