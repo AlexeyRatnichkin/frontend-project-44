@@ -1,18 +1,41 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/AlexeyRatnichkin/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/AlexeyRatnichkin/frontend-project-44/actions)
 
-brain-even:
-https://asciinema.org/a/n1XO74itTXfVcvRNAhKJ7mCN3
+Brain-games:
+These are five console games:
+• Brain-even - you need to determine the number for parity.
+• Brain-calc - you need to calculate a pair of numbers.
+• Brain-gcd - you need to calculate and output the greatest common divisor of these numbers.
+• Brain-prime - you need to determine a prime number or not a prime number.
+• Brain-progression - you need to identify the hidden number.
 
-brain-calc:
-https://asciinema.org/a/rLKMSELI92l1Q6F6xLfsVFcSG
+Answer the questions and by typing three correct answers without mistakes you will win!
 
-brain-gcd:
-https://asciinema.org/a/Gxpm6iFuWdLwJKn9IHSCWUwkH
+GOOD LUCK!
 
-brain-progression:
-https://asciinema.org/a/7Gl6glPUWJsHFdHYQ8fvRhqID
+Starting the game
 
-brain-prime:
-https://asciinema.org/a/WZiqPT54vsoju7BDPatdSrE1j
+To choose one of them, write "brain-even", "brain-calc", "brain-gcd", "brain-prime" or "brain-progression" in your console. 
+
+INSTALLATION
+
+Clone this repository on your machine and write "sudo make install" in the project directory. 
+https://asciinema.org/a/OOYIMmxUIOR9buyyFQz7jrTGj
+
+Game demonstrations
+• Brain-even - you need to determine the number for parity. 
+https://asciinema.org/a/6T2kH5omt0OEa5uoTyniJ7aBU
+
+• Brain-calc - you need to calculate a pair of numbers.
+https://asciinema.org/a/GYLaapUQOzqR8tZOWZi5b1ktb
+
+• Brain-gcd - you need to calculate and output the greatest common divisor of these numbers.
+https://asciinema.org/a/vIwz4xysVWeQXS8mgFBjrqHZA
+
+• Brain-prime - you need to determine a prime number or not a prime number.
+https://asciinema.org/a/itck0X6tCzdBaO2pE2vRw25qz
+
+• Brain-progression - you need to identify the hidden number.
+https://asciinema.org/a/PiyFcLa6LCLL50vXXzoHafXzL
+
 
