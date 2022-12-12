@@ -33,7 +33,8 @@ https://asciinema.org/a/GYLaapUQOzqR8tZOWZi5b1ktb
 https://asciinema.org/a/vIwz4xysVWeQXS8mgFBjrqHZA
 
 • Brain-prime - you need to determine a prime number or not a prime number.
-https://asciinema.org/a/itck0X6tCzdBaO2pE2vRw25qz
+https://asciinema.org/a/B1jRxvfDANpePL9Z78mhRbC0i
+
 
 • Brain-progression - you need to identify the hidden number.
 https://asciinema.org/a/PiyFcLa6LCLL50vXXzoHafXzL
