@@ -1,4 +1,4 @@
-import getRandomNumber from '../utils.js';
+import randomNumber from '../utils.js';
 import gameEngine from '../index.js';
 
 /* Цель игры */
@@ -19,7 +19,7 @@ function isTheNumberPrime(number) {
 
 /* Получаем массив вопросов и ответов. */
 function getQuestAndAnswer() {
-  const question = getRandomNumber(1, 100);
+  const question = randomNumber(1, 100);
   const correctAnswer = isTheNumberPrime(question) ? 'yes' : 'no';
 
   return [question, correctAnswer];
