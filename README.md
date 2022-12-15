@@ -24,19 +24,18 @@ Clone this repository on your machine and write "make install" in the project di
 
 Game demonstrations
 • Brain-even - you need to determine the number for parity. 
-https://asciinema.org/a/6T2kH5omt0OEa5uoTyniJ7aBU
+[![asciicast](https://asciinema.org/a/6T2kH5omt0OEa5uoTyniJ7aBU.svg)](https://asciinema.org/a/6T2kH5omt0OEa5uoTyniJ7aBU)
 
 • Brain-calc - you need to calculate a pair of numbers.
-https://asciinema.org/a/GYLaapUQOzqR8tZOWZi5b1ktb
+[![asciicast](https://asciinema.org/a/vIwz4xysVWeQXS8mgFBjrqHZA.svg)](https://asciinema.org/a/vIwz4xysVWeQXS8mgFBjrqHZA)
 
 • Brain-gcd - you need to calculate and output the greatest common divisor of these numbers.
-https://asciinema.org/a/vIwz4xysVWeQXS8mgFBjrqHZA
+[![asciicast](https://asciinema.org/a/vIwz4xysVWeQXS8mgFBjrqHZA.svg)](https://asciinema.org/a/vIwz4xysVWeQXS8mgFBjrqHZA)
 
 • Brain-prime - you need to determine a prime number or not a prime number.
-https://asciinema.org/a/B1jRxvfDANpePL9Z78mhRbC0i
-
+[![asciicast](https://asciinema.org/a/B1jRxvfDANpePL9Z78mhRbC0i.svg)](https://asciinema.org/a/B1jRxvfDANpePL9Z78mhRbC0i)
 
 • Brain-progression - you need to identify the hidden number.
-https://asciinema.org/a/PiyFcLa6LCLL50vXXzoHafXzL
+[![asciicast](https://asciinema.org/a/PiyFcLa6LCLL50vXXzoHafXzL.svg)](https://asciinema.org/a/PiyFcLa6LCLL50vXXzoHafXzL)
 
 
