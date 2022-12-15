@@ -1,43 +1,40 @@
-import getRandomNumber from '../utils.js';
+import randomNumber from '../utils.js';
 import gameEngine from '../index.js';
 
 /* Цель игры. */
 const description = 'What is the result of the expression?';
 
-/* Массив с возможными операциями. */
-const operations = ['+', '-', '*'];
-
-/* Получение случайной операции. */
-function getRandomOperation(arrayWithOperations) {
-  const rand = Math.floor(Math.random() * arrayWithOperations.length);
-  return operations[rand];
-}
-
 /* Получение верного ответа. */
-function calculate(firstNumber, secondNumber, operation) {
-  switch (operation) {
+const colculate = (operator, operandOne, operandTwo) => {
+  let resultCalc = 0;
+  switch (operator) {
     case '+':
-      return (firstNumber + secondNumber).toString();
+      resultCalc = operandOne + operandTwo;
+      break;
     case '-':
-      return (firstNumber - secondNumber).toString();
+      resultCalc = operandOne - operandTwo;
+      break;
+    case '*':
+      resultCalc = operandOne * operandTwo;
+      break;
     default:
-      return (firstNumber * secondNumber).toString();
+      break;
   }
-}
+  return resultCalc;
+};
+
+/* Массив с возможными операциями. */
+const operators = ['+', '-', '*'];
 
 /* Массив с вопросами и ответами. */
-function getQuestAndAnswer() {
-  let firstNumber = 0;
-  let secondNumber = 0;
-  let operation = '';
-  firstNumber = getRandomNumber(0, 10);
-  secondNumber = getRandomNumber(0, 10);
-  operation = getRandomOperation(operations);
-  const question = `${firstNumber} ${operation} ${secondNumber} = ?`;
-  const correctAnswer = calculate(firstNumber, secondNumber, operation);
-
-  return [question, correctAnswer];
-}
+const getQuestAndAnswer = () => {
+  const randNumber1 = randomNumber(0, 10);
+  const randNumber2 = randomNumber(0, 10);
+  const randOperator = operators[randomNumber(0, operators.length - 1)];
+  const question = `${randNumber1} ${randOperator} ${randNumber2}`;
+  const resultCalc = colculate(randOperator, randNumber1, randNumber2);
+  return [question, String(resultCalc)];
+};
 
 export default () => {
   gameEngine(description, getQuestAndAnswer);
