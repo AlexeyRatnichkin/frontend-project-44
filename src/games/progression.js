@@ -17,18 +17,16 @@ const getProgression = (firstNum, progressionStep, length) => {
 };
 
 /* Получаем ответы и вопросы. */
-function getQuestAndAnswer() {
-  const startNum = randomNumber(0, 50);
-  const step = randomNumber(2, 9);
-  const progression = getProgression(startNum, step);
-  const randomIndex = randomNumber(1, 10);
-
-  const correctAnswer = String(progression[randomIndex]);
-  progression[randomIndex] = '..';
+const getQuestAndAnswer = () => {
+  const step = randomNumber(1, 10);
+  const firstNumProgression = randomNumber(1, 20);
+  const hiddenNumIndex = randomNumber(0, 9);
+  const progression = getProgression(firstNumProgression, step, progressionLength);
+  const hiddenNum = progression[hiddenNumIndex];
+  progression[hiddenNumIndex] = '..';
   const question = progression.join(' ');
-
-  return [question, correctAnswer];
-}
+  return [question, String(hiddenNum)];
+};
 
 export default () => {
   gameEngine(description, getQuestAndAnswer);
