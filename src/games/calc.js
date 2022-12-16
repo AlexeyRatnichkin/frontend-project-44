@@ -6,7 +6,6 @@ const description = 'What is the result of the expression?';
 
 /* Получение верного ответа. */
 const colculate = (operator, operandOne, operandTwo) => {
-  let resultCalc = 0;
   switch (operator) {
     case '+':
       return operandOne + operandTwo;
@@ -17,7 +16,6 @@ const colculate = (operator, operandOne, operandTwo) => {
     default:
       throw new Error('Unknown operator');
   }
-  return resultCalc;
 };
 
 /* Массив с возможными операциями. */
