@@ -25,5 +25,5 @@ export default (taskOfGame, getQuestAndAnswer) => {
       return;
     }
   }
-  return console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 };
