@@ -22,7 +22,7 @@ export default (taskOfGame, getQuestAndAnswer) => {
     } else {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
       console.log(`Let's try again, ${name}!`);
-      break;
+      return;
     }
   }
   return console.log(`Congratulations, ${name}!`);
