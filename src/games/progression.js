@@ -8,10 +8,8 @@ const progressionLength = 10;
 // Создание массива с прогрессией.
 function getProgression(firstNumber, step) {
   const progression = [firstNumber];
-  let nextNumber = firstNumber + step;
   for (let i = 1; i < progressionLength; i += 1) {
-    progression.push(nextNumber);
-    nextNumber += step;
+    progression.push(firstNumber + (i * step));
   }
   return progression;
 }
