@@ -8,23 +8,15 @@ const description = 'Find the greatest common divisor of given numbers.';
 const getGcd = (num1, num2) => {
   let x = num1;
   let y = num2;
-  if (x > y) {
-    while (y !== 0) {
-      const intNum = y;
-      y = x % y;
-      x = intNum;
+  while (x !== 0 && y !== 0) {
+    if (x > y) {
+      x %= y;
+    } else {
+      y %= x;
     }
-    return x;
   }
-  if (y > x) {
-    while (x !== 0) {
-      const intNum = x;
-      x = y % x;
-      y = intNum;
-    }
-    return y;
-  }
-  return x;
+
+  return x + y;
 };
 
 /* Массив с вопросами и ответами. */
@@ -32,9 +24,9 @@ function getQuestAndAnswer() {
   const firstNumber = randomNumber(1, 50);
   const secondNumber = randomNumber(1, 50);
   const question = `${firstNumber} ${secondNumber}`;
-  const correctAnswer = `${getGcd(firstNumber, secondNumber)}`;
+  const correctAnswer = getGcd(firstNumber, secondNumber);
 
-  return [question, correctAnswer];
+  return [question, String(correctAnswer)];
 }
 
 export default () => {
