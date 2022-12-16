@@ -9,16 +9,13 @@ const colculate = (operator, operandOne, operandTwo) => {
   let resultCalc = 0;
   switch (operator) {
     case '+':
-      resultCalc = operandOne + operandTwo;
-      break;
+      return operandOne + operandTwo;
     case '-':
-      resultCalc = operandOne - operandTwo;
-      break;
+      return operandOne - operandTwo;
     case '*':
-      resultCalc = operandOne * operandTwo;
-      break;
+      return operandOne * operandTwo;
     default:
-      break;
+      throw new Error('Unknown operator');
   }
   return resultCalc;
 };
