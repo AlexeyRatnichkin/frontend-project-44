@@ -12,7 +12,7 @@ const getProgression = (firstNumber, step) => {
     progression.push(firstNumber + (i * step));
   }
   return progression;
-}
+};
 
 /* Получаем ответы и вопросы. */
 const getQuestAndAnswer = () => {
@@ -25,7 +25,7 @@ const getQuestAndAnswer = () => {
   const question = progression.join(' ');
 
   return [question, correctAnswer];
-}
+};
 
 export default () => {
   buildGame(description, getQuestAndAnswer);
