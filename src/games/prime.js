@@ -15,7 +15,7 @@ const isNumberPrime = (number) => {
     }
   }
   return true;
-}
+};
 
 /* Получаем массив вопросов и ответов. */
 const getQuestAndAnswer = () => {
@@ -23,7 +23,7 @@ const getQuestAndAnswer = () => {
   const correctAnswer = isNumberPrime(question) ? 'yes' : 'no';
 
   return [question, correctAnswer];
-}
+};
 
 export default () => {
   buildGame(description, getQuestAndAnswer);
