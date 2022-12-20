@@ -1,11 +1,11 @@
 import randomNumber from '../utils.js';
-import gameEngine from '../index.js';
+import buildGame from '../index.js';
 
 /* Цель игры. */
 const description = 'What is the result of the expression?';
 
 /* Получение верного ответа. */
-const colculate = (operator, operandOne, operandTwo) => {
+const calculator = (operator, operandOne, operandTwo) => {
   switch (operator) {
     case '+':
       return operandOne + operandTwo;
@@ -14,7 +14,7 @@ const colculate = (operator, operandOne, operandTwo) => {
     case '*':
       return operandOne * operandTwo;
     default:
-      throw new Error('Unknown operator');
+      throw new Error(`Unknown operator: '${operator}'`);
   }
 };
 
@@ -27,10 +27,10 @@ const getQuestAndAnswer = () => {
   const randNumber2 = randomNumber(0, 10);
   const randOperator = operators[randomNumber(0, operators.length - 1)];
   const question = `${randNumber1} ${randOperator} ${randNumber2}`;
-  const resultCalc = colculate(randOperator, randNumber1, randNumber2);
+  const resultCalc = calculator(randOperator, randNumber1, randNumber2);
   return [question, String(resultCalc)];
 };
 
 export default () => {
-  gameEngine(description, getQuestAndAnswer);
+  buildGame(description, getQuestAndAnswer);
 };
