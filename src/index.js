@@ -2,17 +2,17 @@
 
 import readlineSync from 'readline-sync';
 
-// Количество раундов.
+/* Количество раундов. */
 export const countRounds = 3;
 
-export default (taskOfGame, getQuestAndAnswer) => {
+const buildGame = (taskOfGame, getQuestAndAnswer) => {
   console.log('Welcome, to the   Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log(taskOfGame);
 
-  // Логика вопросов, получения ответов и их сравнение.
-  // Счетчик верных ответов.
+  /* Логика вопросов, получения ответов и их сравнение. */
+  /* Счетчик верных ответов. */
   for (let i = 0; i < countRounds; i += 1) {
     const [question, correctAnswer] = getQuestAndAnswer();
     console.log(`Question: ${question}`);
@@ -27,3 +27,5 @@ export default (taskOfGame, getQuestAndAnswer) => {
   }
   console.log(`Congratulations, ${name}!`);
 };
+
+export default buildGame;
