@@ -27,7 +27,7 @@ const getQuestAndAnswer = () => {
   const correctAnswer = getGcd(firstNumber, secondNumber);
 
   return [question, String(correctAnswer)];
-}
+};
 
 export default () => {
   buildGame(description, getQuestAndAnswer);
