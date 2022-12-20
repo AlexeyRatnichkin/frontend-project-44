@@ -1,11 +1,11 @@
 import randomNumber from '../utils.js';
-import gameEngine from '../index.js';
+import buildGame from '../index.js';
 
 /* Цель игры */
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".ind the greatest common divisor of given numbers.';
 
 /* Проверка на простое число. */
-function isTheNumberPrime(number) {
+const isNumberPrime = (number) => {
   if (number === 1) {
     return false;
   }
@@ -18,13 +18,13 @@ function isTheNumberPrime(number) {
 }
 
 /* Получаем массив вопросов и ответов. */
-function getQuestAndAnswer() {
+const getQuestAndAnswer = () => {
   const question = randomNumber(1, 100);
-  const correctAnswer = isTheNumberPrime(question) ? 'yes' : 'no';
+  const correctAnswer = isNumberPrime(question) ? 'yes' : 'no';
 
   return [question, correctAnswer];
 }
 
 export default () => {
-  gameEngine(description, getQuestAndAnswer);
+  buildGame(description, getQuestAndAnswer);
 };
