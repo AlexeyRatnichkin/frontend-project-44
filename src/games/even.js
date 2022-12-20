@@ -1,5 +1,5 @@
 import randomNumber from '../utils.js';
-import gameEngine from '../index.js';
+import buildGame from '../index.js';
 
 /* Цель игры. */
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -15,5 +15,5 @@ const getQuestAndAnswer = () => {
 };
 
 export default () => {
-  gameEngine(description, getQuestAndAnswer);
+  buildGame(description, getQuestAndAnswer);
 };
